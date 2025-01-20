@@ -1,16 +1,11 @@
-import React from "react";
-import placeholder from "../assets/placeholder.svg";
-
-const CoverArt = ({ imageUrl }) => {
+export default function CoverArt() {
   return (
-    <div className="h-80 w-80 overflow-hidden rounded-lg bg-gray-100">
+    <div className="flex aspect-square w-full max-w-md items-center justify-center rounded-lg bg-gray-100">
       <img
-        src={imageUrl || placeholder}
+        src="/placeholder.svg"
         alt="Album Cover"
-        className="h-full w-full object-cover"
+        className="h-full w-full rounded-lg object-contain"
       />
     </div>
   );
-};
-
-export default CoverArt;
+}

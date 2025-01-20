@@ -1,12 +1,10 @@
-import React from "react";
-
-const SongTitle = () => {
+export default function SongTitle() {
   return (
-    <div className="text-center">
-      <h1 className="mb-1 text-2xl font-bold">Tidal Drift</h1>
-      <p className="text-gray-600">Echoes of the Sea</p>
+    <div className="flex flex-col items-start gap-1">
+      <h1 className="text-2xl font-bold">Tidal Drift</h1>
+      <p className="text-custom-slate text-base font-normal">
+        Echoes of the Sea
+      </p>
     </div>
   );
-};
-
-export default SongTitle;
+}

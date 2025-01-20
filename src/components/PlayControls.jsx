@@ -1,26 +1,26 @@
-import React from "react";
-import { Play, SkipBack, SkipForward, Shuffle } from "lucide-react";
+import { Rewind, FastForward, Play, Shuffle } from "lucide-react";
 
-const PlayControls = () => {
+export default function PlayControls() {
   return (
     <div className="flex items-center justify-center gap-8">
-      <button className="text-gray-600">
-        <span className="text-sm">1x</span>
+      <button className="text-black" aria-label="Playback speed">
+        <span className="text-lg font-normal">1x</span>
       </button>
-      <button className="text-gray-600">
-        <SkipBack size={24} />
+      <button className="text-neutral-400" aria-label="Rewind">
+        <Rewind className="h-6 w-6" fill="currentColor" />
       </button>
-      <button className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-400">
-        <Play size={24} className="ml-1" />
+      <button
+        className="rounded-md border-2 border-black p-2 text-black"
+        aria-label="Play"
+      >
+        <Play className="h-6 w-6" fill="currentColor" />
       </button>
-      <button className="text-gray-600">
-        <SkipForward size={24} />
+      <button className="text-black" aria-label="Fast forward">
+        <FastForward className="h-6 w-6" fill="currentColor" />
       </button>
-      <button className="text-gray-600">
-        <Shuffle size={20} />
+      <button className="text-black" aria-label="Shuffle">
+        <Shuffle className="h-6 w-6" />
       </button>
     </div>
   );
-};
-
-export default PlayControls;
+}
