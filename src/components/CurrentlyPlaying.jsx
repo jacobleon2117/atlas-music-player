@@ -13,7 +13,7 @@ export default function MusicPlayer() {
       <div className="mt-6 h-[62px] w-full">
         <SongTitle />
       </div>
-      <div className="mt-6 h-[62px] w-full">
+      <div className="h-[62px] w-full">
         <PlayControls />
       </div>
       <div className="h-[18px] w-full">
