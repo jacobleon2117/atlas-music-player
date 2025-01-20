@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         "custom-slate": "#64748B",
+        "slider-bg": "#D5D7D8",
       },
     },
   },

@@ -1,0 +1,60 @@
+FONT SIZES (Figma px → Tailwind)
+
+12px → text-xs
+14px → text-sm
+16px → text-base
+18px → text-lg
+20px → text-xl
+24px → text-2xl
+30px → text-3xl
+36px → text-4xl
+48px → text-5xl
+60px → text-6xl
+72px → text-7xl
+96px → text-8xl
+128px → text-9xl
+
+FONT WEIGHTS (Figma → Tailwind)
+
+100 → font-thin
+200 → font-extralight
+300 → font-light
+400 → font-normal
+500 → font-medium
+600 → font-semibold
+700 → font-bold
+800 → font-extrabold
+900 → font-black
+
+WIDTH/HEIGHT (Figma px → Tailwind)
+
+0px   → w-0/h-0
+1px   → w-px/h-px
+2px   → w-0.5/h-0.5
+4px   → w-1/h-1
+6px   → w-1.5/h-1.5
+8px   → w-2/h-2
+10px  → w-2.5/h-2.5
+12px  → w-3/h-3
+14px  → w-3.5/h-3.5
+16px  → w-4/h-4
+20px  → w-5/h-5
+24px  → w-6/h-6
+28px  → w-7/h-7
+32px  → w-8/h-8
+36px  → w-9/h-9
+40px  → w-10/h-10
+44px  → w-11/h-11
+48px  → w-12/h-12
+56px  → w-14/h-14
+64px  → w-16/h-16
+80px  → w-20/h-20
+96px  → w-24/h-24
+128px → w-32/h-32
+160px → w-40/h-40
+192px → w-48/h-48
+224px → w-56/h-56
+256px → w-64/h-64
+288px → w-72/h-72
+320px → w-80/h-80
+384px → w-96/h-96
