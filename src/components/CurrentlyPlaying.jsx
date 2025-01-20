@@ -3,7 +3,7 @@ import SongTitle from "./SongTitle";
 import PlayControls from "./PlayControls";
 import VolumeControls from "./VolumeControls";
 
-export default function MusicPlayer() {
+export default function CurrentlyPlaying() {
   return (
     <div className="flex w-[400px] flex-col">
       <div className="h-[400px] w-[400px]">
