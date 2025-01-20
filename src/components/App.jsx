@@ -1,11 +1,11 @@
 import Footer from "./Footer";
-import MusicPlayer from "./MusicPlayer";
+import CurrentlyPlaying from "./CurrentlyPlaying";
 
 function App() {
   return (
     <div className="flex min-h-screen flex-col justify-between bg-white p-8">
       <div className="flex flex-col items-center gap-8">
-        <MusicPlayer />
+        <CurrentlyPlaying />
       </div>
       <Footer />
     </div>

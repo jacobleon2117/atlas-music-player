@@ -1,4 +1,4 @@
-export default function PlayListitem({ title, artist, duration }) {
+export default function PlayList({ title, artist, duration }) {
   return (
     <div className="flex h-[44px] w-full items-center overflow-hidden">
       <div className="flex h-full flex-grow flex-col justify-between py-[1px]">
