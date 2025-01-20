@@ -1,10 +1,10 @@
 import React from "react";
 
-const SongTitle = ({ title = "Tidal Drift", artist = "Echoes of the Sea" }) => {
+const SongTitle = () => {
   return (
-    <div className="flex flex-col items-start gap-1">
-      <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
-      <p className="text-base text-gray-600">{artist}</p>
+    <div className="text-center">
+      <h1 className="mb-1 text-2xl font-bold">Tidal Drift</h1>
+      <p className="text-gray-600">Echoes of the Sea</p>
     </div>
   );
 };
