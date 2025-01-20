@@ -10,7 +10,7 @@ export default {
         "custom-slate": "#64748B",
         "slider-bg": "#D5D7D8",
         "playlist-text-color": "#94A3B8",
-        "playlist-highlight-color": "#F1F5F9",
+        "playlist-highlight": "#F1F5F9",
       },
     },
   },

@@ -1,7 +1,6 @@
-import React from "react";
 import songData from "/songs.json";
 
-const Playlist = () => {
+export default function Playlist() {
   return (
     <div className="w-[402px]">
       <h1 className="mb-2 text-lg font-bold text-black">Playlist</h1>
@@ -9,7 +8,7 @@ const Playlist = () => {
         <div
           key={index}
           className={`flex h-[44px] items-center ${
-            song.highlighted ? "rounded-md bg-[#F1F5F9]" : "bg-white"
+            song.highlighted ? "bg-playlist-highlight rounded-md" : "bg-white"
           }`}
         >
           <div className="flex-grow">
@@ -25,6 +24,4 @@ const Playlist = () => {
       ))}
     </div>
   );
-};
-
-export default Playlist;
+}
