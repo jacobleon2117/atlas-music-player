@@ -4,7 +4,7 @@ export default function CoverArt() {
       src="/placeholder.svg"
       alt="Album Cover"
       aria-label="Album artwork for current song"
-      className="h-96 w-96 rounded-sm"
+      className="h-[400px] w-[400px] rounded-sm"
     />
   );
 }

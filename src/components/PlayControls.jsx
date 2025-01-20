@@ -2,7 +2,7 @@ import { Rewind, FastForward, Play, Shuffle } from "lucide-react";
 
 export default function PlayControls() {
   return (
-    <div className="flex items-center justify-center gap-8">
+    <div className="flex items-center justify-center gap-16">
       <button className="text-black" aria-label="Playback speed">
         <span className="text-lg font-normal">1x</span>
       </button>

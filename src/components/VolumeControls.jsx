@@ -1,6 +1,6 @@
 import { Volume2 } from "lucide-react";
 
-export default function VolumeControl() {
+export default function VolumeControls() {
   return (
     <div className="flex items-center gap-4" aria-label="Volume controls">
       <Volume2
