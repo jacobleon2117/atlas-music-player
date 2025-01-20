@@ -9,7 +9,6 @@ const MusicPlayer = () => {
       <CoverArt />
       <SongTitle />
       <PlayControls />
-      <div className="text-gray-500">Music player goes here</div>
     </div>
   );
 };
