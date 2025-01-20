@@ -1,9 +1,11 @@
 import Footer from "./Footer";
 import MusicPlayer from "./MusicPlayer";
+import CoverArt from "./CoverArt";
 
 function App() {
   return (
-    <div className="h-full flex flex-col justify-between p-8 min-h-screen">
+    <div className="flex h-full min-h-screen flex-col justify-between p-8">
+      <CoverArt />
       <MusicPlayer />
       <Footer />
     </div>
