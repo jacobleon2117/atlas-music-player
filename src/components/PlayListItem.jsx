@@ -3,16 +3,16 @@ export default function PlayListitem({ title, artist, duration }) {
     <div className="flex h-[44px] w-full items-center overflow-hidden">
       <div className="flex h-full flex-grow flex-col justify-between py-[1px]">
         <div className="flex h-[22px] items-center">
-          <span className="truncate text-base font-medium">{title}</span>
+          <span className="truncate text-base font-medium">Electric Fever</span>
         </div>
         <div className="flex h-[22px] items-center">
           <span className="text-playlist-text-color truncate text-sm font-medium">
-            {artist}
+            Neon Jungle
           </span>
         </div>
       </div>
       <div className="flex h-full items-center">
-        <span className="text-playlist-text-color text-sm">{duration}</span>
+        <span className="text-playlist-text-color text-sm">8:41</span>
       </div>
     </div>
   );
