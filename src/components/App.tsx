@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import MusicPlayer from "./MusicPlayer";
 
-function App() {
+export default function App() {
   return (
     <div className="flex min-h-screen flex-col overflow-hidden bg-white dark:bg-primary-dark">
       <div className="flex flex-grow flex-col items-center justify-center px-4">
@@ -13,5 +13,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

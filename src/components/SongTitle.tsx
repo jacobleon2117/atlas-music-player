@@ -1,8 +1,10 @@
-import React from "react";
-import songData from "/songs.json";
+interface SongTitleProps {
+  title: string;
+  artist: string;
+}
 
-export default function SongTitle({ selectedSong }) {
-  if (!songData || !songData[selectedSong]) {
+export default function SongTitle({ title, artist }: SongTitleProps) {
+  if (!title || !artist) {
     return (
       <div className="animate-pulse">
         <div className="mb-2 h-8 w-3/4 rounded bg-gray-300 dark:bg-gray-700"></div>
@@ -14,10 +16,10 @@ export default function SongTitle({ selectedSong }) {
   return (
     <>
       <h1 className="truncate text-2xl font-bold text-primary-dark dark:text-white">
-        {songData[selectedSong].title}
+        {title}
       </h1>
       <p className="truncate text-base font-normal text-primary-dark/80 dark:text-primary-sage">
-        {songData[selectedSong].artist}
+        {artist}
       </p>
     </>
   );

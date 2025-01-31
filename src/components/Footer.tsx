@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 
 export default function Footer() {
-  const [isDark, setIsDark] = useState(() => {
+  const [isDark, setIsDark] = useState<boolean>(() => {
     return localStorage.getItem("theme") === "dark";
   });
 

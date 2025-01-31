@@ -1,14 +1,20 @@
 import { useState, useRef, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
-export default function VolumeControls() {
-  const [volume, setVolume] = useState(50);
+interface VolumeControlsProps {
+  volume: number;
+  setVolume: (volume: number) => void;
+}
+
+export default function VolumeControls({ volume, setVolume }: VolumeControlsProps) {
   const [isMuted, setIsMuted] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-  const sliderRef = useRef(null);
-  const handleRef = useRef(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const handleRef = useRef<HTMLDivElement>(null);
 
-  const calculateVolume = (clientX) => {
+  const calculateVolume = (clientX: number): number => {
+    if (!sliderRef.current || !handleRef.current) return 50;
+    
     const rect = sliderRef.current.getBoundingClientRect();
     const handleWidth = handleRef.current.offsetWidth;
     const adjustedLeft = rect.left + handleWidth / 2;
@@ -17,18 +23,18 @@ export default function VolumeControls() {
     return Math.min(Math.max((x / adjustedWidth) * 100, 0), 100);
   };
 
-  const handleVolumeChange = (clientX) => {
+  const handleVolumeChange = (clientX: number) => {
     const newVolume = calculateVolume(clientX);
     setVolume(newVolume);
     if (isMuted) setIsMuted(false);
   };
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
     handleVolumeChange(e.clientX);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: MouseEvent) => {
     if (!isDragging) return;
     handleVolumeChange(e.clientX);
   };
@@ -37,14 +43,14 @@ export default function VolumeControls() {
     setIsDragging(false);
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = (e: TouchEvent) => {
     if (!isDragging) return;
     e.preventDefault();
     const touch = e.touches[0];
     handleVolumeChange(touch.clientX);
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent) => {
     setIsDragging(true);
     const touch = e.touches[0];
     handleVolumeChange(touch.clientX);
@@ -86,12 +92,15 @@ export default function VolumeControls() {
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
         className="relative h-2 w-[374px] cursor-pointer rounded-lg bg-primary-light dark:bg-primary-sage/30"
-        aria-label="Volume slider track"
+        role="slider"
+        aria-label="Volume slider"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={isMuted ? 0 : volume}
       >
         <div
           className="absolute h-full rounded-l-lg bg-primary-sage transition-[width] duration-75 dark:bg-primary-light"
           style={{ width: `${isMuted ? 0 : volume}%` }}
-          aria-label="Volume slider progress"
         />
         <div
           ref={handleRef}
@@ -100,7 +109,6 @@ export default function VolumeControls() {
             left: `${isMuted ? 0 : volume}%`,
             transform: "translate(-50%, -50%)",
           }}
-          aria-label="Volume slider handle"
         />
       </div>
     </div>
