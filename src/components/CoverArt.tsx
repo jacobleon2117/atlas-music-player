@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 interface CoverArtProps {
   songId: string;
-  coverUrl: string;
+  coverUrl: string | null;
   title: string;
 }
 
@@ -36,12 +36,18 @@ export default function CoverArt({ songId, coverUrl, title }: CoverArtProps) {
       }}
       onMouseLeave={() => setShowLyrics(false)}
     >
-      <img
-        src={coverUrl}
-        alt={`Album artwork for ${title}`}
-        className="h-full w-full rounded-md object-cover"
-      />
-      
+      {coverUrl ? (
+        <img
+          src={coverUrl}
+          alt={`Album artwork for ${title}`}
+          className="h-full w-full rounded-md object-cover"
+        />
+      ) : (
+        <div className="h-full w-full bg-gray-200 rounded-md flex items-center justify-center">
+          <span className="text-gray-500">No Cover</span>
+        </div>
+      )}
+
       {showLyrics && (
         <div className="absolute inset-0 overflow-auto bg-black/75 p-4 text-white opacity-0 transition-opacity hover:opacity-100">
           {isLoading ? (

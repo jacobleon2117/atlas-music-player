@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PlayListItem > renders selected state 1`] = `
+<div>
+  <div
+    class="flex h-[44px] cursor-pointer items-center rounded-lg px-2 transition-colors bg-primary-light dark:bg-primary-sage/30 border-primary-sage mx-[-2px] border dark:border-white"
+  >
+    <div
+      class="flex-grow"
+    >
+      <div
+        class="text-primary-dark text-base font-medium dark:text-white"
+      >
+        Test Song
+      </div>
+      <div
+        class="text-primary-sage dark:text-primary-sage/80 text-sm font-medium"
+      >
+        Test Artist
+      </div>
+    </div>
+    <span
+      class="text-primary-sage dark:text-primary-sage/80 text-sm font-medium"
+    >
+      3:00
+    </span>
+  </div>
+</div>
+`;
+
+exports[`PlayListItem > renders unselected state 1`] = `
+<div>
+  <div
+    class="flex h-[44px] cursor-pointer items-center rounded-lg px-2 transition-colors hover:bg-primary-light/50 dark:hover:bg-primary-sage/20"
+  >
+    <div
+      class="flex-grow"
+    >
+      <div
+        class="text-primary-dark text-base font-medium dark:text-white"
+      >
+        Test Song
+      </div>
+      <div
+        class="text-primary-sage dark:text-primary-sage/80 text-sm font-medium"
+      >
+        Test Artist
+      </div>
+    </div>
+    <span
+      class="text-primary-sage dark:text-primary-sage/80 text-sm font-medium"
+    >
+      3:00
+    </span>
+  </div>
+</div>
+`;
+
+exports[`PlayListItem > renders with different duration formats 1`] = `
+<div>
+  <div
+    class="flex h-[44px] cursor-pointer items-center rounded-lg px-2 transition-colors hover:bg-primary-light/50 dark:hover:bg-primary-sage/20"
+  >
+    <div
+      class="flex-grow"
+    >
+      <div
+        class="text-primary-dark text-base font-medium dark:text-white"
+      >
+        Test Song
+      </div>
+      <div
+        class="text-primary-sage dark:text-primary-sage/80 text-sm font-medium"
+      >
+        Test Artist
+      </div>
+    </div>
+    <span
+      class="text-primary-sage dark:text-primary-sage/80 text-sm font-medium"
+    >
+      60:00
+    </span>
+  </div>
+</div>
+`;

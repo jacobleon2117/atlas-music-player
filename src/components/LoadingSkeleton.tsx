@@ -1,6 +1,9 @@
 export default function LoadingSkeleton() {
   return (
-    <div className="flex flex-col items-center justify-center gap-8 px-8 md:flex-row md:items-start">
+    <div 
+      data-testid="loading-skeleton"
+      className="flex flex-col items-center justify-center gap-8 px-8 md:flex-row md:items-start"
+    >
       <div className="flex w-[400px] flex-col">
         <div className="bg-primary-light dark:bg-primary-sage/30 h-[400px] w-[400px] animate-pulse" />
         <div className="mt-6 h-[62px] w-full">

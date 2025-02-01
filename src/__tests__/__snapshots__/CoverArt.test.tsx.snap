@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CoverArt > renders with all props 1`] = `
+<div>
+  <div
+    class="relative h-[400px] w-[400px]"
+  >
+    <img
+      alt="Album artwork for Test Song"
+      class="h-full w-full rounded-md object-cover"
+      src="test-cover.jpg"
+    />
+  </div>
+</div>
+`;
+
+exports[`CoverArt > renders with minimal props 1`] = `
+<div>
+  <div
+    class="relative h-[400px] w-[400px]"
+  >
+    <div
+      class="h-full w-full bg-gray-200 rounded-md flex items-center justify-center"
+    >
+      <span
+        class="text-gray-500"
+      >
+        No Cover
+      </span>
+    </div>
+  </div>
+</div>
+`;

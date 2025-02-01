@@ -1,6 +1,6 @@
 interface SongTitleProps {
-  title: string;
-  artist: string;
+  title: string | undefined;
+  artist: string | undefined;
 }
 
 export default function SongTitle({ title, artist }: SongTitleProps) {
